@@ -1,0 +1,35 @@
+{
+  "expo": {
+    "name": "connect-app",
+    "slug": "connect-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "experiments": {
+      "tsconfigPaths": true
+    },
+    "packagerOpts": {
+      "config": "metro.config.js",
+      "sourceExts": ["js", "jsx", "scss", "sass"]
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
+}
