@@ -26,6 +26,12 @@
 
 <!-- TODO -->
 
+## Form
+
+### When we want to create form, we use external library called _react-hook-form_
+
+If you are new to _react-hook-form_ library then we recommend you to create your form along with documentation: https://react-hook-form.com/get-started
+
 ## ESlint
 
 ### When pushing branch to remote repo there shouldn't be any eslint error as well as warning
