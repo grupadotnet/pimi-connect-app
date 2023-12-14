@@ -1,5 +1,7 @@
 # pimi-connect-app
 
+[![Lint](https://github.com/grupadotnet/pimi-connect-app/actions/workflows/lint.yml/badge.svg)](https://github.com/grupadotnet/pimi-connect-app/actions/workflows/lint.yml)
+
 ## Project structure
 
 ### We use feature-based approach in our project so we keep all files related to a specific feature close to each other
