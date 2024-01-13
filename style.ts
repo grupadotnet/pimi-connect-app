@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
 
-const globalStyles = StyleSheet.create({
+export const globalStyles = StyleSheet.create({
   verticalFlex: {
     display: 'flex',
     flexDirection: 'column',
@@ -14,4 +14,10 @@ const globalStyles = StyleSheet.create({
   },
 });
 
-export { globalStyles };
+export const darkColors = {
+  primary: 'blue',
+};
+
+export const lightColors = {
+  primary: 'green',
+};
