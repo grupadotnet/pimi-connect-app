@@ -1,5 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import { globalStyles } from 'style';
 
 const App = () => {
   return (
@@ -12,7 +13,8 @@ const App = () => {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    ...globalStyles.horizontalFlex,
+    ...globalStyles.centerFlex,
     backgroundColor: 'white',
     alignItems: 'center',
     justifyContent: 'center',
