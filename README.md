@@ -26,7 +26,7 @@
 
 ## Styling
 
-### File **_style.ts_** contains all contains all global styling that are being used in app (flex, grid, variables etc.)
+### File `style.ts` contains all contains all global styling that are being used in app (flex, grid, variables etc.)
 
 `You should declare all reusable stylings there`
 
