@@ -8,7 +8,7 @@
     "ios": "expo start --ios",
     "web": "expo start --web",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx",
-    "test": "jest --watch"
+    "test": "jest"
   },
   "dependencies": {
     "@react-native/metro-config": "^0.73.3",
