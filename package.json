@@ -10,11 +10,8 @@
     "lint": "eslint --ext .js,.jsx,.ts,.tsx"
   },
   "dependencies": {
-<<<<<<< HEAD
     "@expo/webpack-config": "^19.0.0",
-=======
     "@react-native/metro-config": "^0.73.3",
->>>>>>> 832ebd9a2b3bc99bca6e08195d98fc76755064ea
     "expo": "~49.0.15",
     "expo-status-bar": "~1.6.0",
     "react": "18.2.0",
