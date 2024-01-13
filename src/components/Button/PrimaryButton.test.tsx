@@ -17,4 +17,7 @@ describe('PrimaryButton component tests', () => {
 
     expect(onPress).toHaveBeenCalledTimes(1);
   });
+  it('test', () => {
+    expect(true).toBeTruthy();
+  });
 });
