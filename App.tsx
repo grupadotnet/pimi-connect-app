@@ -2,6 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import PrimaryButton from './src/components/PrimaryButton';
 import StatusButton from '@/components/StatusButton';
+import { globalStyles } from 'style';
 
 const App = () => {
   return (
@@ -19,7 +20,12 @@ const App = () => {
 
 const styles = StyleSheet.create({
   container: {
+<<<<<<< HEAD
     flex: 1,
+=======
+    ...globalStyles.horizontalFlex,
+    ...globalStyles.centerFlex,
+>>>>>>> 832ebd9a2b3bc99bca6e08195d98fc76755064ea
     backgroundColor: 'white',
     alignItems: 'center',
     justifyContent: 'center',
