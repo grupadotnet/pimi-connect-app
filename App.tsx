@@ -1,11 +1,18 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import PrimaryButton from './src/components/PrimaryButton';
+import StatusButton from '@/components/StatusButton';
 
 const App = () => {
   return (
     <View style={styles.container}>
       <Text>Open up App.tsx to start working on your app!</Text>
       <StatusBar style="auto" />
+      <StatusButton title="Niedostępny" status='Inaccessible'></StatusButton>
+      <StatusButton title="Dostępny" status='Accessible'></StatusButton>
+      <StatusButton title="Nie przeszkadzać" status='DoNotDisturb'></StatusButton>
+      <StatusButton title="Zaraz wracam" status='BeRightBack'></StatusButton>
+      <StatusButton title="default" status='default'></StatusButton>
     </View>
   );
 };
@@ -13,7 +20,7 @@ const App = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#121212',
+    backgroundColor: 'white',
     alignItems: 'center',
     justifyContent: 'center',
   },
