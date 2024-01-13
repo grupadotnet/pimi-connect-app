@@ -1,5 +1,5 @@
-import { Pressable, StyleSheet, Text } from 'react-native';
 import React from 'react';
+import { Pressable, StyleSheet, Text } from 'react-native';
 
 interface Param {
   title: string;
