@@ -1,34 +1,27 @@
 import { NavigationContainer } from '@react-navigation/native';
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
-import { PrimaryButton, SwitchTheme } from '@/components';
 import { ThemeProvider } from '@/hooks';
+import { Components, Home } from '@/screens';
+import { RootStackParamList } from '@/types/param';
+
+const Stack = createNativeStackNavigator<RootStackParamList>();
 
 const App = () => {
   return (
     <NavigationContainer>
       <ThemeProvider>
-        <View style={styles.container}>
-          <Text>Open up App.tsx to start working on your app!</Text>
-          <StatusBar style="auto" />
-          <SwitchTheme />
-          <PrimaryButton onPress={() => {}} title="dasdsa" />
-        </View>
+        <Stack.Navigator initialRouteName="Home">
+          <Stack.Screen
+            name="Home"
+            component={Home}
+            options={{ title: 'Welcome' }}
+          />
+          <Stack.Screen name="Components" component={Components} />
+        </Stack.Navigator>
       </ThemeProvider>
     </NavigationContainer>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    color: 'red',
-    height: '100%',
-    width: '100%',
-    backgroundColor: 'white',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
 
 export default App;
