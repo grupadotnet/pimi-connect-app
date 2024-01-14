@@ -30,6 +30,16 @@
 
 `You should declare all reusable stylings there`
 
+## Theming
+
+![themed colors example](./readme/themedColors.png)
+
+### Example of how do we declare colors for different themes
+
+![usage of themes](./readme/themeUsage.png)
+
+### Example of how do we use themes in component
+
 ## Form
 
 ### When we want to create form, we use external library called _react-hook-form_
