@@ -35,7 +35,7 @@ module.exports = {
     'react-hooks/exhaustive-deps': 'warn',
     'simple-import-sort/imports': 'warn',
     'simple-import-sort/exports': 'warn',
-    indent: ['warn', 2],
+    indent: ['warn', 2, { SwitchCase: 1 }],
     quotes: ['warn', 'single'],
     semi: ['warn', 'always'],
   },
