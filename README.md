@@ -4,29 +4,31 @@
 
 ## Project structure
 
-### We use feature-based approach in our project so we keep all files related to a specific feature close to each other
+### We use a feature-based approach in our project so we keep all files related to a specific feature close to each other
 
-- **_/components_** - `global reusable components in whole app`
+### We keep tests close to the tested files
+
+- **_/components_** - `global reusable components in a whole app`
 
 - **_/features_** - `ready to use application features that work independently from each other`
 
-- **_/screens_** - `screens of the application (same as views in web)`
+- **_/screens_** - `screens of the application (same as views in a web)`
 
 - **_/controllers_** - `api connection functions`
 
 - **_/types_** - `global typescript types`
 
-- **_/utils_** - `helper functions that are reusable in whole app`
+- **_/utils_** - `helper functions that are reusable in a whole app`
 
-- **_/hooks_** - `global custom hooks reusable in whole app`
+- **_/hooks_** - `global custom hooks reusable in a whole app`
 
-#### **! All tests, styling files, feature specific hooks, utils etc. should be stored directly in the feature itself !**
+#### **! All tests, styling files, feature-specific hooks, utils, etc. should be stored directly in the feature itself !**
 
 ![structure example](./readme/structure_example.png)
 
 ## Styling
 
-### File **_style.ts_** contains all contains all global styling that are being used in app (flex, grid, variables etc.)
+### File **_style.ts_** contains all the global styling that is being used in the app (flex, grid, variables, etc.)
 
 `You should declare all reusable stylings there`
 
@@ -42,13 +44,13 @@
 
 ## Form
 
-### When we want to create form, we use external library called _react-hook-form_
+### When we want to create a form, we use an external library called _react-hook-form_
 
-If you are new to _react-hook-form_ library then we recommend you to create your form along with documentation: https://react-hook-form.com/get-started
+If you are new to _react-hook-form_ library then we recommend you create your form along with documentation: https://react-hook-form.com/get-started
 
 ## ESlint
 
-### When pushing branch to remote repo there shouldn't be any eslint error as well as warning
+### When pushing the branch to the remote repo there shouldn't be any eslint error as well as warning
 
 ### To sort imports:
 
@@ -77,7 +79,7 @@ npm install -G yarn
 
 - Install required dependencies
 
-**In project main directory:**
+**In a project main directory:**
 
 ```
 yarn
