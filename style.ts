@@ -16,8 +16,14 @@ export const globalStyles = StyleSheet.create({
 
 export const darkColors = {
   primary: 'blue',
+  buttonBackground: 'blue',
+  buttonText: 'white',
+  buttonActive: '#E4E4E4',
 };
 
 export const lightColors = {
   primary: 'green',
+  buttonBackground: 'white',
+  buttonText: 'black',
+  buttonActive: '#E4E4E4',
 };

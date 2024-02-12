@@ -1,7 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 
-import { PrimaryButton, SwitchTheme } from '@/components';
+import { SwitchTheme } from '@/components';
+import { PrimaryButton, StatusButton } from '@/components/Button';
 import { ThemeProvider } from '@/hooks';
 
 const App = () => {
@@ -12,6 +13,11 @@ const App = () => {
         <StatusBar style="auto" />
         <SwitchTheme />
         <PrimaryButton onPress={() => {}} title="dasdsa" />
+        <StatusButton onPress={() => {}} status="Inaccessible" />
+        <StatusButton onPress={() => {}} status="Accessible" />
+        <StatusButton onPress={() => {}} status="DoNotDisturb" />
+        <StatusButton onPress={() => {}} status="BeRightBack" />
+        <StatusButton onPress={() => {}} status="other" />
       </View>
     </ThemeProvider>
   );
