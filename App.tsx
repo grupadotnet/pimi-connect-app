@@ -1,27 +1,33 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 
-import StatusButton from './src/components/StatusButton';
-import { globalStyles } from './style';
+import { SwitchTheme } from '@/components';
+import { PrimaryButton, StatusButton } from '@/components/Button';
+import { ThemeProvider } from '@/hooks';
 
 const App = () => {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-      <StatusButton title="Niedostępny" status={0} onPress={() => {}} />
-      <StatusButton title="Dostępny" status={1} onPress={() => {}} />
-      <StatusButton title="Nie przeszkadzać" status={2} onPress={() => {}} />
-      <StatusButton title="Zaraz wracam" status={3} onPress={() => {}} />
-      <StatusButton title="default" status={4} onPress={() => {}} />
-    </View>
+    <ThemeProvider>
+      <View style={styles.container}>
+        <Text>Open up App.tsx to start working on your app!</Text>
+        <StatusBar style="auto" />
+        <SwitchTheme />
+        <PrimaryButton onPress={() => {}} title="dasdsa" />
+        <StatusButton onPress={() => {}} status="Inaccessible" />
+        <StatusButton onPress={() => {}} status="Accessible" />
+        <StatusButton onPress={() => {}} status="DoNotDisturb" />
+        <StatusButton onPress={() => {}} status="BeRightBack" />
+        <StatusButton onPress={() => {}} status="other" />
+      </View>
+    </ThemeProvider>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    ...globalStyles.horizontalFlex,
-    ...globalStyles.centerFlex,
+    color: 'red',
+    height: '100%',
+    width: '100%',
     backgroundColor: 'white',
     alignItems: 'center',
     justifyContent: 'center',
