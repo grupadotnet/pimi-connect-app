@@ -16,8 +16,14 @@ export const globalStyles = StyleSheet.create({
 
 export const darkColors = {
   primary: 'blue',
+  inputBackground: '#2d2d2d',
+  text: 'white',
+  inputBorder: '#c7c4d6',
 };
 
 export const lightColors = {
   primary: 'green',
+  inputBackground: '#f0f0f0',
+  Text: 'black',
+  inputBorder: '#c7c4d6',
 };
