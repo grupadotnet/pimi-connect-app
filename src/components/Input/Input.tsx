@@ -20,7 +20,7 @@ const Input = ({ ...props }: Props) => {
         style={{
           ...styles.input,
           backgroundColor: themedStyles.inputBackground,
-          color: themedStyles.lightText,
+          color: themedStyles.text,
           borderColor: themedStyles.inputBorder,
         }}
         defaultValue=""
@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
     fontFamily: '',
   },
   input: {
-    borderWidth: 1,
+    borderWidth: 2.3,
     borderRadius: 10,
     width: 300,
     height: 40,
