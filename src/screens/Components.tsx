@@ -3,9 +3,9 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { globalStyles } from 'style';
 
-import { Input } from '@/components/Input';
 import { SwitchTheme } from '@/components';
 import { PrimaryButton } from '@/components/Button';
+import { Input } from '@/components/Input';
 import { RootStackParamList } from '@/types/param';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Components'>;
@@ -18,7 +18,7 @@ const Home = ({ navigation }: Props) => {
         label="Email"
         placeholder="Enter your email"
         onSubmit={(text) => console.log(text)}
-      ></Input>
+      />
       <PrimaryButton
         title="Wróć do Home Screen"
         onPress={() => navigation.navigate('Home')}
