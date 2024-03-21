@@ -5,7 +5,7 @@ import { globalStyles } from 'style';
 
 import { SwitchTheme } from '@/components';
 import { PrimaryButton } from '@/components/Button';
-import { Input } from '@/components/Input';
+import { TextInput } from '@/components/TextInput';
 import { RootStackParamList } from '@/types/param';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Components'>;
@@ -14,7 +14,7 @@ const Home = ({ navigation }: Props) => {
   return (
     <View style={styles.container}>
       <Text>Components screen</Text>
-      <Input
+      <TextInput
         label="Email"
         placeholder="Enter your email"
         onSubmit={(text) => console.log(text)}

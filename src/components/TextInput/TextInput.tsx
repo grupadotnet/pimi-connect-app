@@ -1,29 +1,33 @@
 import React from 'react';
-import { StyleSheet, Text, TextInput, View } from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  TextInput as ReactTextInput,
+  View,
+} from 'react-native';
 
 import { useTheme } from '@/hooks';
 
-type Props = React.ComponentPropsWithRef<typeof TextInput> & {
+type Props = React.ComponentPropsWithRef<typeof ReactTextInput> & {
   label: string;
   secureTextEntry?: boolean;
   onSubmit: (text: string) => void;
 };
 
-const Input = ({ ...props }: Props) => {
+const TextInput = ({ ...props }: Props) => {
   const { themedStyles } = useTheme();
   return (
     <View style={styles.container}>
       <Text style={{ ...styles.label, color: themedStyles.text }}>
         {props.label}
       </Text>
-      <TextInput
+      <ReactTextInput
         style={{
           ...styles.input,
           backgroundColor: themedStyles.inputBackground,
           color: themedStyles.text,
           borderColor: themedStyles.inputBorder,
         }}
-        defaultValue=""
         secureTextEntry={props.secureTextEntry}
         onSubmitEditing={(value) => props.onSubmit(value.nativeEvent.text)}
       />
@@ -50,4 +54,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Input;
+export default TextInput;
