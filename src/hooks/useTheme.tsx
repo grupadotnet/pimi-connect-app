@@ -45,7 +45,6 @@ export const ThemeProvider = ({ children }: Props) => {
 
   useEffect(() => {
     // Load saved theme from storage
-    console.log('xd');
     const getTheme = async () => {
       try {
         const savedTheme = await AsyncStorage.getItem('theme');
