@@ -1,15 +1,15 @@
 import React from 'react';
 import { Pressable, StyleSheet, Text } from 'react-native';
 
-interface Param {
-  title: string;
-  onPress: any;
-}
+type Props = React.ComponentProps<typeof Pressable> & {
+  text: string;
+  onPress: () => void;
+};
 
-const PrimaryButton = (param: Param) => {
+const PrimaryButton = ({ text, onPress, ...passThroughProps }: Props) => {
   return (
-    <Pressable style={styles.button} onPress={param.onPress}>
-      <Text style={styles.text}>{param.title}</Text>
+    <Pressable {...passThroughProps} style={styles.button} onPress={onPress}>
+      <Text style={styles.text}>{text}</Text>
     </Pressable>
   );
 };
