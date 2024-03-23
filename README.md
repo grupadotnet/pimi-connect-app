@@ -58,6 +58,23 @@ If you are new to _react-hook-form_ library then we recommend you create your fo
 
 ![2 step](./readme/sort_import_2.png)
 
+## Translations
+
+### Structure
+
+![translations structure](./readme/translations_structure.png)
+
+### To add a new translation file
+
+- create file in `/public/locales/pl` and every other language folder
+- import it to the typescript declaration file and add it to the resources as shown below - `/src/types/i18next.d.ts`: ![translations declatarion file](./readme/translations_declaration_file.png)
+
+### Recommended way of translationing
+
+- `Import { t } from 'i18-next';`
+- `const { t } = useTranslation('common');`, where `common` is the name of the file from which we want to get a translation (namespace)
+- use translated text in the app - `t('Hello', {ns: 'common'})` - where `Hello` is the translated text and common is the name of the file (if we have imported only one namepsace then it can be skipped)
+
 ## Start development
 
 - Clone repository
