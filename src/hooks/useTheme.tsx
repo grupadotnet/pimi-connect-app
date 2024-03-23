@@ -3,7 +3,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { useColorScheme } from 'react-native';
 import { darkColors, lightColors } from 'style';
 
-import { isTypeOfTheme, Theme, THEMES } from '@/types/theme';
+import { Colors, isTypeOfTheme, Theme, THEMES } from '@/types/theme';
 
 type Props = {
   children: React.ReactNode;
@@ -11,7 +11,7 @@ type Props = {
 
 type Context = {
   theme: Theme;
-  themedStyles: Record<string, string>;
+  themedStyles: Record<Colors, string>;
   switchTheme: () => void;
 };
 

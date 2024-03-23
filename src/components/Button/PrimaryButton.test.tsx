@@ -1,12 +1,17 @@
 import { fireEvent, render, screen } from '@testing-library/react-native';
 
 import PrimaryButton from './PrimaryButton';
+import { ThemeProvider } from '@/hooks';
 
 const onPress = jest.fn();
 
 describe('PrimaryButton component tests', () => {
   it('properly renders button with provided text', () => {
-    render(<PrimaryButton text="test" onPress={onPress} />);
+    render(
+      <ThemeProvider>
+        <PrimaryButton text="test" onPress={onPress} />
+      </ThemeProvider>,
+    );
 
     expect(screen.getByText('test')).toBeDefined();
   });
