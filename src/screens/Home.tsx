@@ -12,7 +12,7 @@ const Home = ({ navigation }: Props) => {
   return (
     <View style={styles.container}>
       <PrimaryButton
-        title="Idź do Components Screen"
+        text="Idź do Components Screen"
         onPress={() => navigation.navigate('Components')}
       />
     </View>
