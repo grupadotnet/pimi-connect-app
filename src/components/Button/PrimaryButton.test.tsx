@@ -1,7 +1,8 @@
 import { fireEvent, render, screen } from '@testing-library/react-native';
 
-import PrimaryButton from './PrimaryButton';
 import { ThemeProvider } from '@/hooks';
+
+import PrimaryButton from './PrimaryButton';
 
 const onPress = jest.fn();
 
