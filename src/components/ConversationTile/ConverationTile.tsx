@@ -8,7 +8,8 @@ type Props = {
   lastMessage: string;
   lastMessageAuthor: string;
   image: string;
-  status: Status;
+  conversationStatus: Status;
+  messageRead: boolean;
 };
 
 const ConversationTile = (props: Props) => {
