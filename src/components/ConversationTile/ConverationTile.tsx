@@ -2,9 +2,9 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { globalStyles, universalColors } from 'style';
 
-import { useTheme } from '@/hooks';
-
 import Avatar from './Avatar';
+
+import { useTheme } from '@/hooks';
 
 type Props = React.ComponentProps<typeof Avatar> & {
   conversationTitle: string;
