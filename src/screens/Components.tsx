@@ -35,6 +35,17 @@ const Home = ({ navigation }: Props) => {
         lastMessageAuthor="Marek Kowalski"
         messageRead
       />
+      <ConversationTile
+        image={{
+          source: {
+            uri: 'https://images.pexels.com/photos/11073147/pexels-photo-11073147.jpeg?cs=srgb&dl=pexels-merve-t%C3%BClek-11073147.jpg&fm=jpg',
+          },
+        }}
+        conversationStatus="be right back"
+        conversationTitle="Marek Kowalski"
+        lastMessage="lorem ipsum lorem ipsum lorem ipsum lorem ipsum. lorem ipsum"
+        lastMessageAuthor="Marek Kowalski"
+      />
       <PrimaryButton text="primary button" onPress={() => {}} />
     </View>
   );

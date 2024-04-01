@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { globalStyles } from 'style';
+import { globalStyles, universalColors } from 'style';
 
 import { useTheme } from '@/hooks';
 
@@ -10,7 +10,7 @@ type Props = React.ComponentProps<typeof Avatar> & {
   conversationTitle: string;
   lastMessage: string;
   lastMessageAuthor: string;
-  messageRead: boolean;
+  messageRead?: boolean;
 };
 
 const ConversationTile = ({
@@ -26,27 +26,38 @@ const ConversationTile = ({
     <View style={styles.container}>
       <Avatar {...passThroughProps} />
       <View style={styles.contentContainer}>
-        <Text style={{ ...styles.title, color: themedStyles.title }}>
+        <Text style={{ ...styles.title, color: themedStyles.text }}>
           {conversationTitle}
         </Text>
-        <Text
-          style={{ ...styles.message, color: themedStyles.secondaryMessage }}
-        >
-          {lastMessageAuthor}:
+        <View style={styles.lastMessageContainer}>
+          <Text
+            style={{
+              ...styles.lastMessageAuthor,
+              color: themedStyles.textSecondary,
+            }}
+          >
+            {lastMessageAuthor}:
+          </Text>
           <Text
             numberOfLines={1}
             ellipsizeMode="tail"
-            style={messageRead ? null : { fontWeight: '600' }}
+            style={{
+              ...styles.lastMessage,
+              color: themedStyles.textSecondary,
+              fontWeight: messageRead ? '400' : '600',
+            }}
           >
-            {lastMessage}
+            {/* to create empty space between author and message */}
+            {` ${lastMessage}`}
           </Text>
-        </Text>
+        </View>
       </View>
-      {messageRead && (
+      {/* if message is not read, display icon */}
+      {!messageRead && (
         <View
           style={{
             ...styles.unreadIcon,
-            backgroundColor: themedStyles.primary,
+            backgroundColor: universalColors.primary,
           }}
         />
       )}
@@ -60,7 +71,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
     gap: 11,
-    width: 290,
+    width: '100%',
     height: 73,
     backgroundColor: 'transparent',
     paddingVertical: 12,
@@ -69,14 +80,21 @@ const styles = StyleSheet.create({
   contentContainer: {
     ...globalStyles.verticalFlex,
     gap: 4,
-    width: 196,
+    flex: 1,
     height: 42,
   },
   title: {
     fontSize: 12,
     fontWeight: '600',
   },
-  message: {
+  lastMessageContainer: {
+    ...globalStyles.horizontalFlex,
+  },
+  lastMessageAuthor: {
+    fontSize: 12,
+  },
+  lastMessage: {
+    flex: 1,
     fontSize: 12,
   },
   unreadIcon: {

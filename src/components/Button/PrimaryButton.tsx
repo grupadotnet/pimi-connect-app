@@ -1,28 +1,23 @@
 import React from 'react';
 import { Pressable, StyleSheet, Text } from 'react-native';
-
-import { useTheme } from '@/hooks';
+import { universalColors } from 'style';
 
 type Props = React.ComponentProps<typeof Pressable> & {
   text: string;
   onPress: () => void;
 };
 
-const PrimaryButton = ({ text, onPress, ...passThroughProps }: Props) => {
-  const { themedStyles } = useTheme();
-
-  return (
-    <Pressable
-      {...passThroughProps}
-      style={{ ...styles.button, backgroundColor: themedStyles.button }}
-      onPress={onPress}
-    >
-      <Text style={{ ...styles.text, color: themedStyles.buttonText }}>
-        {text}
-      </Text>
-    </Pressable>
-  );
-};
+const PrimaryButton = ({ text, onPress, ...passThroughProps }: Props) => (
+  <Pressable
+    {...passThroughProps}
+    style={{ ...styles.button, backgroundColor: universalColors.primary }}
+    onPress={onPress}
+  >
+    <Text style={{ ...styles.text, color: universalColors.textOnPrimary }}>
+      {text}
+    </Text>
+  </Pressable>
+);
 
 export default PrimaryButton;
 

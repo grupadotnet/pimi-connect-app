@@ -5,12 +5,12 @@ import { Status } from '@/types/status';
 export const mapStatusToColor = (status: Status): string => {
   switch (status) {
     case 'available':
-      return universalColors.available;
+      return universalColors.americanGreen;
     case 'do not disturb':
-      return universalColors.doNotDisturb;
+      return universalColors.permanentGeraniumLake;
     case 'unavailable':
-      return universalColors.unavailable;
+      return universalColors.lightSilver;
     case 'be right back':
-      return universalColors.beRightBack;
+      return universalColors.metallicYellow;
   }
 };
