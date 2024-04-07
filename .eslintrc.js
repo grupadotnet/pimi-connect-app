@@ -16,7 +16,7 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module',
   },
-  plugins: ['react', 'react-native', 'simple-import-sort', 'prettier'],
+  plugins: ['react', 'react-native', 'prettier'],
   rules: {
     '@typescript-eslint/no-unused-vars': ['error', { varsIgnorePattern: '_' }],
     'prettier/prettier': [
@@ -33,8 +33,6 @@ module.exports = {
     ],
     'react/react-in-jsx-scope': 'off',
     'react-hooks/exhaustive-deps': 'warn',
-    'simple-import-sort/imports': 'warn',
-    'simple-import-sort/exports': 'warn',
     indent: ['warn', 2, { SwitchCase: 1 }],
     quotes: ['warn', 'single'],
     semi: ['warn', 'always'],
