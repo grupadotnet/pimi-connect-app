@@ -14,13 +14,11 @@ type Props = React.ComponentPropsWithRef<typeof ReactTextInput> & {
   onSubmit: (text: string) => void;
 };
 
-const TextInput = ({ ...props }: Props) => {
+const TextInput = ({ label, secureTextEntry, onSubmit }: Props) => {
   const { themedStyles } = useTheme();
   return (
     <View style={styles.container}>
-      <Text style={{ ...styles.label, color: themedStyles.text }}>
-        {props.label}
-      </Text>
+      <Text style={{ ...styles.label, color: themedStyles.text }}>{label}</Text>
       <ReactTextInput
         style={{
           ...styles.input,
@@ -28,8 +26,8 @@ const TextInput = ({ ...props }: Props) => {
           color: themedStyles.text,
           borderColor: themedStyles.inputBorder,
         }}
-        secureTextEntry={props.secureTextEntry}
-        onSubmitEditing={(value) => props.onSubmit(value.nativeEvent.text)}
+        secureTextEntry={secureTextEntry}
+        onSubmitEditing={(value) => onSubmit(value.nativeEvent.text)}
       />
     </View>
   );
