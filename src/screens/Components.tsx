@@ -3,16 +3,22 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { StyleSheet, Text, View } from 'react-native';
 import { globalStyles } from 'style';
+import useSWR from 'swr';
 
 import { PrimaryButton } from '@/components/Button';
 import { ConversationTile } from '@/components/ConversationTile';
 import { SwitchTheme } from '@/components/Theme';
+import { get } from '@/controllers';
 import { RootStackParamList } from '@/types/param';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Components'>;
 
 const Home = ({ navigation }: Props) => {
   const { t } = useTranslation('common');
+
+  const { data, isLoading, error } = useSWR('/Attachment/GetAllAsync', get({}));
+
+  console.log(data, isLoading, error);
 
   return (
     <View style={styles.container}>
