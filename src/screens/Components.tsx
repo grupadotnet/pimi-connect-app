@@ -5,8 +5,8 @@ import { StyleSheet, Text, View } from 'react-native';
 import { globalStyles } from 'style';
 
 import { PrimaryButton } from '@/components/Button';
-import { TextInput } from '@/components/TextInput';
 import { ConversationTile } from '@/components/ConversationTile';
+import { TextInput } from '@/components/TextInput';
 import { SwitchTheme } from '@/components/Theme';
 import { RootStackParamList } from '@/types/param';
 
@@ -17,7 +17,6 @@ const Home = ({ navigation }: Props) => {
 
   return (
     <View style={styles.container}>
-
       <Text>Components screen</Text>
       <Text>{t('Hello')}</Text>
       <PrimaryButton
