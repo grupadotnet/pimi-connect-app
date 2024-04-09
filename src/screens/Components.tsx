@@ -6,6 +6,7 @@ import { globalStyles } from 'style';
 
 import { PrimaryButton } from '@/components/Button';
 import { ConversationTile } from '@/components/ConversationTile';
+import { TextInput } from '@/components/TextInput';
 import { SwitchTheme } from '@/components/Theme';
 import { RootStackParamList } from '@/types/param';
 
@@ -16,12 +17,18 @@ const Home = ({ navigation }: Props) => {
 
   return (
     <View style={styles.container}>
+      <Text>Components screen</Text>
       <Text>{t('Hello')}</Text>
       <PrimaryButton
         text="Wróć do Home Screen"
         onPress={() => navigation.navigate('Home')}
       />
       <PrimaryButton text="primary button" onPress={() => {}} />
+      <TextInput
+        label="Email"
+        placeholder="Enter your email"
+        onSubmit={(text) => console.log(text)}
+      />
       <SwitchTheme />
       <ConversationTile
         image={{
