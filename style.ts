@@ -7,6 +7,7 @@ export const globalStyles = StyleSheet.create({
   },
   horizontalFlex: {
     display: 'flex',
+    flexDirection: 'row',
   },
   centerFlex: {
     justifyContent: 'center',
@@ -14,16 +15,27 @@ export const globalStyles = StyleSheet.create({
   },
 });
 
+export const universalColors = {
+  permanentGeraniumLake: '#DF2B2B',
+  americanGreen: '#37B744',
+  lightSilver: '#D9D9D9',
+  metallicYellow: '#FED815',
+  primary: '#5964AB',
+  textOnPrimary: '#FFFFFF',
+};
+
 export const darkColors = {
-  primary: 'blue',
+  background: '#2F2F2F',
+  text: '#FFFFFF',
+  textSecondary: '#FFFFFF',
   inputBackground: '#2d2d2d',
-  text: 'white',
   inputBorder: '#c7c4d6',
 };
 
 export const lightColors = {
-  primary: 'green',
+  background: '#FFFFFF',
+  text: '#010000',
+  textSecondary: '#73828A',
   inputBackground: '#f0f0f0',
-  Text: 'black',
   inputBorder: '#c7c4d6',
 };

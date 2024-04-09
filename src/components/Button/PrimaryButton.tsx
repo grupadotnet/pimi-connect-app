@@ -1,18 +1,23 @@
 import React from 'react';
 import { Pressable, StyleSheet, Text } from 'react-native';
+import { universalColors } from 'style';
 
-interface Param {
-  title: string;
-  onPress: any;
-}
-
-const PrimaryButton = (param: Param) => {
-  return (
-    <Pressable style={styles.button} onPress={param.onPress}>
-      <Text style={styles.text}>{param.title}</Text>
-    </Pressable>
-  );
+type Props = React.ComponentProps<typeof Pressable> & {
+  text: string;
+  onPress: () => void;
 };
+
+const PrimaryButton = ({ text, onPress, ...passThroughProps }: Props) => (
+  <Pressable
+    {...passThroughProps}
+    style={{ ...styles.button, backgroundColor: universalColors.primary }}
+    onPress={onPress}
+  >
+    <Text style={{ ...styles.text, color: universalColors.textOnPrimary }}>
+      {text}
+    </Text>
+  </Pressable>
+);
 
 export default PrimaryButton;
 
@@ -20,14 +25,12 @@ const styles = StyleSheet.create({
   button: {
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#5964AB',
     width: 291,
     height: 44,
     borderRadius: 10,
   },
 
   text: {
-    color: '#FFFFFF',
     fontSize: 12,
     lineHeight: 15,
     fontWeight: '500',
