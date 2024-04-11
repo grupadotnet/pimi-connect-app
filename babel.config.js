@@ -11,6 +11,7 @@ module.exports = function (api) {
             '@': './src',
             style: './style.ts',
             public: './public',
+            api: './api',
           },
         },
       ],
