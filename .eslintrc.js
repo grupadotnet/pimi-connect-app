@@ -33,7 +33,6 @@ module.exports = {
     ],
     'react/react-in-jsx-scope': 'off',
     'react-hooks/exhaustive-deps': 'warn',
-    indent: ['warn', 2, { SwitchCase: 1 }],
     quotes: ['warn', 'single'],
     semi: ['warn', 'always'],
   },

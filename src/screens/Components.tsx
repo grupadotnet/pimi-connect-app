@@ -3,13 +3,13 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { StyleSheet, Text, View } from 'react-native';
 import { globalStyles } from 'style';
-import useSWR from 'swr';
 
 import { PrimaryButton } from '@/components/Button';
 import { ConversationTile } from '@/components/ConversationTile';
 import { TextInput } from '@/components/TextInput';
 import { SwitchTheme } from '@/components/Theme';
-import { get } from '@/controllers';
+import { getExample } from '@/controllers';
+import { usePromise } from '@/hooks';
 import { RootStackParamList } from '@/types/param';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Components'>;
@@ -17,9 +17,11 @@ type Props = NativeStackScreenProps<RootStackParamList, 'Components'>;
 const Home = ({ navigation }: Props) => {
   const { t } = useTranslation('common');
 
-  const { data, isLoading, error } = useSWR('/Attachment/GetAllAsync', get({}));
+  const [invoke, isLoading] = usePromise(getExample, (data) => {
+    console.log(data);
+  });
 
-  console.log(data, isLoading, error);
+  console.log(isLoading);
 
   return (
     <View style={styles.container}>
@@ -59,7 +61,7 @@ const Home = ({ navigation }: Props) => {
         lastMessage="lorem ipsum lorem ipsum lorem ipsum lorem ipsum. lorem ipsum"
         lastMessageAuthor="Marek Kowalski"
       />
-      <PrimaryButton text="primary button" onPress={() => {}} />
+      <PrimaryButton text="pobierz dane" onPress={invoke} />
     </View>
   );
 };
