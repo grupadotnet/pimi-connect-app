@@ -61,7 +61,11 @@ const Home = ({ navigation }: Props) => {
         lastMessage="lorem ipsum lorem ipsum lorem ipsum lorem ipsum. lorem ipsum"
         lastMessageAuthor="Marek Kowalski"
       />
-      <PrimaryButton text="pobierz dane" onPress={invoke} />
+      <PrimaryButton
+        disabled={isLoading}
+        text="pobierz dane"
+        onPress={invoke}
+      />
     </View>
   );
 };
