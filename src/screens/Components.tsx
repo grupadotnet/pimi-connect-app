@@ -9,6 +9,7 @@ import { ConversationTile } from '@/components/ConversationTile';
 import { TextInput } from '@/components/TextInput';
 import { SwitchTheme } from '@/components/Theme';
 import { RootStackParamList } from '@/types/param';
+import { SearchBar } from '@/components/SearchBar';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Components'>;
 
@@ -54,6 +55,7 @@ const Home = ({ navigation }: Props) => {
         lastMessageAuthor="Marek Kowalski"
       />
       <PrimaryButton text="primary button" onPress={() => {}} />
+      <SearchBar />
     </View>
   );
 };
