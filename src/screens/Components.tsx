@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { StyleSheet, Text, View } from 'react-native';
 import { globalStyles } from 'style';
 
-import { PrimaryButton } from '@/components/Button';
+import { PrimaryButton, SecondaryButton } from '@/components/Button';
 import { ConversationTile } from '@/components/ConversationTile';
 import { SwitchTheme } from '@/components/Theme';
 import { RootStackParamList } from '@/types/param';
@@ -47,6 +47,7 @@ const Home = ({ navigation }: Props) => {
         lastMessageAuthor="Marek Kowalski"
       />
       <PrimaryButton text="primary button" onPress={() => {}} />
+      <SecondaryButton text="secondary button" onPress={() => {}} />
     </View>
   );
 };

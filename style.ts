@@ -28,10 +28,12 @@ export const darkColors = {
   background: '#2F2F2F',
   text: '#FFFFFF',
   textSecondary: '#FFFFFF',
+  textButtonSecondary: '#FFFFFF',
 };
 
 export const lightColors = {
   background: '#FFFFFF',
   text: '#010000',
   textSecondary: '#73828A',
+  textButtonSecondary: '#7A7A7A',
 };
