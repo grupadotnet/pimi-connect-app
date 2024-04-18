@@ -29,6 +29,8 @@ export const darkColors = {
   text: '#FFFFFF',
   textSecondary: '#FFFFFF',
   textButtonSecondary: '#FFFFFF',
+  inputBackground: '#2d2d2d',
+  inputBorder: '#c7c4d6',
 };
 
 export const lightColors = {
@@ -36,4 +38,6 @@ export const lightColors = {
   text: '#010000',
   textSecondary: '#73828A',
   textButtonSecondary: '#7A7A7A',
+  inputBackground: '#f0f0f0',
+  inputBorder: '#c7c4d6',
 };
