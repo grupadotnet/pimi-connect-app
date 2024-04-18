@@ -8,12 +8,20 @@ import { PrimaryButton } from '@/components/Button';
 import { ConversationTile } from '@/components/ConversationTile';
 import { TextInput } from '@/components/TextInput';
 import { SwitchTheme } from '@/components/Theme';
+import { getExample } from '@/controllers';
+import { usePromise } from '@/hooks';
 import { RootStackParamList } from '@/types/param';
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Components'>;
 
 const Home = ({ navigation }: Props) => {
   const { t } = useTranslation('common');
+
+  const [invoke, isLoading] = usePromise(getExample, (data) => {
+    console.log(data);
+  });
+
+  console.log(isLoading);
 
   return (
     <View style={styles.container}>
@@ -53,7 +61,11 @@ const Home = ({ navigation }: Props) => {
         lastMessage="lorem ipsum lorem ipsum lorem ipsum lorem ipsum. lorem ipsum"
         lastMessageAuthor="Marek Kowalski"
       />
-      <PrimaryButton text="primary button" onPress={() => {}} />
+      <PrimaryButton
+        disabled={isLoading}
+        text="pobierz dane"
+        onPress={invoke}
+      />
     </View>
   );
 };
