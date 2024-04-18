@@ -110,3 +110,7 @@ yarn start
 
 `In the end, your terminal should look like this`
 ![started app](./readme/started_app_in_terminal.png)
+
+## Useful links
+### Figma
+https://www.figma.com/file/DDBAsJ8kCTOVYIONAQtnnU/PIMI-(Copy)?type=design&node-id=34-183&mode=design&t=8UcK5pXcWCUI7YSU-0
